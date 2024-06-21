@@ -85,7 +85,7 @@ class MscclppAllReduce1:
         )
 
     def auto_tune(self):
-        nblocks_to_try = [8, 12, 16, 24, 32, 48, 64, 72, 96, 108]
+        nblocks_to_try = [8, 12, 16, 24, 32, 48, 64, 72, 84]
         block_size_to_try = [256, 512, 1024]
         read_only_to_try = [0, 1]
         for nblocks in nblocks_to_try:
@@ -151,7 +151,7 @@ class MscclppAllReduce2:
         )
 
     def auto_tune(self):
-        nblocks_to_try = [21, 42, 63, 84, 105]
+        nblocks_to_try = [21, 42, 63, 84]
         block_size_to_try = [256, 512, 1024]
         for nblocks in nblocks_to_try:
             for block_size in block_size_to_try:
@@ -220,7 +220,7 @@ class MscclppAllReduce3:
         )
 
     def auto_tune(self):
-        nblocks_to_try = [8, 12, 16, 24, 32, 48, 64, 72, 96, 108]
+        nblocks_to_try = [8, 12, 16, 24, 32, 48, 64, 72, 84]
         block_size_to_try = [256, 512, 1024]
         for nblocks in nblocks_to_try:
             for block_size in block_size_to_try:
@@ -320,7 +320,7 @@ class MscclppAllReduce4:
         )
 
     def auto_tune(self):
-        nblocks_to_try = [24, 32, 40, 45, 48, 64, 72, 90, 96, 108]
+        nblocks_to_try = [24, 32, 40, 45, 48, 64, 72, 84]
         block_size_to_try = [256, 512, 1024]
         pipeline_depth_to_try = [1, 2, 3, 4]
         for nblocks in nblocks_to_try:
@@ -491,7 +491,7 @@ class MscclppAllReduce6:
         )
 
     def auto_tune(self):
-        nblocks_to_try = [8, 12, 16, 24, 32, 48, 64, 72, 96, 108]
+        nblocks_to_try = [8, 12, 16, 24, 32, 48, 64, 72, 84]
         block_size_to_try = [256, 512, 1024]
         for nblocks in nblocks_to_try:
             for block_size in block_size_to_try:

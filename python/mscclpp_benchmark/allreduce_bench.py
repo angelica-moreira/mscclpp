@@ -229,7 +229,7 @@ if __name__ == "__main__":
     cp.cuda.Device(MPI.COMM_WORLD.rank % N_GPUS_PER_NODE).use()
 
     # create a MscclppGroup
-    network_interface = "eth0"
+    network_interface = "eno1np0"
     my_ip = ni.ifaddresses(network_interface)[ni.AF_INET][0]["addr"]
     root_ip = MPI.COMM_WORLD.bcast(my_ip, root=0)
     ifIpPortTrio = network_interface + ":" + root_ip + ":50000"  # some random port
